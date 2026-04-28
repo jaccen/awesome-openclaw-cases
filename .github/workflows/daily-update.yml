@@ -1,0 +1,164 @@
+name: Daily Cases Update
+
+on:
+  schedule:
+    # UTC 01:30 = 北京时间 09:30
+    - cron: '30 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-cases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch latest from source repos
+        run: |
+          echo "=== Fetching latest from hesamsheikh/awesome-openclaw-usecases ==="
+          curl -sL "https://raw.githubusercontent.com/hesamsheikh/awesome-openclaw-usecases/main/README.md" -o /tmp/usecases_raw.md || echo "FETCH_FAILED" > /tmp/usecases_raw.md
+          head -c 100 /tmp/usecases_raw.md
+          echo ""
+
+          echo "=== Fetching latest from VoltAgent/awesome-openclaw-skills ==="
+          curl -sL "https://raw.githubusercontent.com/VoltAgent/awesome-openclaw-skills/main/README.md" -o /tmp/skills_raw.md || echo "FETCH_FAILED" > /tmp/skills_raw.md
+          head -c 100 /tmp/skills_raw.md
+          echo ""
+
+          echo "=== Fetching latest from obra/superpowers ==="
+          curl -sL "https://raw.githubusercontent.com/obra/superpowers/main/README.md" -o /tmp/superpowers_raw.md || echo "FETCH_FAILED" > /tmp/superpowers_raw.md
+
+          echo "=== Fetching latest from alirezarezvani/claude-skills ==="
+          curl -sL "https://raw.githubusercontent.com/alirezarezvani/claude-skills/main/README.md" -o /tmp/claude-skills_raw.md || echo "FETCH_FAILED" > /tmp/claude-skills_raw.md
+
+          echo "=== Fetching latest from FreedomIntelligence/OpenClaw-Medical-Skills ==="
+          curl -sL "https://raw.githubusercontent.com/FreedomIntelligence/OpenClaw-Medical-Skills/main/README.md" -o /tmp/medical_raw.md || echo "FETCH_FAILED" > /tmp/medical_raw.md
+
+          echo "=== Fetching latest from affaan-m/everything-claude-code ==="
+          curl -sL "https://raw.githubusercontent.com/affaan-m/everything-claude-code/main/README.md" -o /tmp/ecc_raw.md || echo "FETCH_FAILED" > /tmp/ecc_raw.md
+
+          echo "=== Fetching latest from farion1231/cc-switch ==="
+          curl -sL "https://raw.githubusercontent.com/farion1231/cc-switch/main/README.md" -o /tmp/cc-switch_raw.md || echo "FETCH_FAILED" > /tmp/cc-switch_raw.md
+
+          echo "FETCH_COMPLETE"
+
+      - name: Check for updates and generate changelog
+        run: |
+          # Store fetched content for comparison
+          mkdir -p .fetch-cache
+          cp /tmp/usecases_raw.md .fetch-cache/usecases.md 2>/dev/null || true
+          cp /tmp/skills_raw.md .fetch-cache/skills.md 2>/dev/null || true
+          cp /tmp/superpowers_raw.md .fetch-cache/superpowers.md 2>/dev/null || true
+          cp /tmp/claude-skills_raw.md .fetch-cache/claude-skills.md 2>/dev/null || true
+          cp /tmp/medical_raw.md .fetch-cache/medical.md 2>/dev/null || true
+          cp /tmp/ecc_raw.md .fetch-cache/ecc.md 2>/dev/null || true
+          cp /tmp/cc-switch_raw.md .fetch-cache/cc-switch.md 2>/dev/null || true
+
+          # Check if content changed
+          CHANGED=false
+          for f in .fetch-cache/*.md; do
+            if [ -f "$f" ] && ! grep -q "FETCH_FAILED" "$f"; then
+              prev=$(ls ".fetch-cache-prev/$(basename $f)" 2>/dev/null)
+              if [ -n "$prev" ]; then
+                if ! diff -q "$f" "$prev" > /dev/null 2>&1; then
+                  CHANGED=true
+                  echo "Changed: $f"
+                fi
+              else
+                CHANGED=true
+                echo "New file: $f"
+              fi
+            fi
+          done
+
+          if [ "$CHANGED" = "true" ]; then
+            echo "UPDATES_FOUND=true" >> $GITHUB_ENV
+            # Generate changelog entry
+            DATE=$(date +%Y-%m-%d)
+            echo "## $DATE" > changelog/latest.md
+            echo "" >> changelog/latest.md
+            echo "### Source Repos Updated" >> changelog/latest.md
+            echo "" >> changelog/latest.md
+            for f in .fetch-cache/*.md; do
+              if [ -f "$f" ] && ! grep -q "FETCH_FAILED" "$f"; then
+                name=$(basename "$f" .md)
+                size=$(wc -c < "$f")
+                echo "- $name: fetched ($size bytes)" >> changelog/latest.md
+              fi
+            done
+            echo "" >> changelog/latest.md
+            echo "**Note**: Content needs manual review before updating case files." >> changelog/latest.md
+
+            # Backup current cache
+            mkdir -p .fetch-cache-prev
+            cp .fetch-cache/*.md .fetch-cache-prev/ 2>/dev/null || true
+          else
+            echo "UPDATES_FOUND=false" >> $GITHUB_ENV
+            echo "No source changes detected."
+          fi
+
+      - name: Update cases count badge
+        if: env.UPDATES_FOUND == 'true'
+        run: |
+          TOTAL=$(find cases -name "*.md" -not -name "README.md" | wc -l)
+          CATEGORIES=$(find cases -mindepth 1 -maxdepth 1 -type d | wc -l)
+          echo "Total cases files: $TOTAL"
+          echo "Categories: $CATEGORIES"
+          # Badge is updated via README reference, no separate action needed
+
+      - name: Commit and push changes
+        if: env.UPDATES_FOUND == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          CHANGES=$(git diff --cached --stat)
+          if [ -n "$CHANGES" ]; then
+            git commit -m "chore: daily update $(date +%Y-%m-%d)
+
+          - Fetched latest from 7 source repositories
+          - Updated fetch cache
+          - Generated changelog entry"
+            git push
+          fi
+
+      - name: Create GitHub Issue for review
+        if: env.UPDATES_FOUND == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const date = new Date().toISOString().split('T')[0];
+            const title = `Daily Update ${date}: New content detected from source repos`;
+            const body = `## Automated Daily Update Report - ${date}
+
+            Source repositories were fetched and changes were detected.
+
+            ### Next Steps
+            - [ ] Review fetched content in \`.fetch-cache/\`
+            - [ ] Identify new cases worth adding
+            - [ ] Update relevant case files
+            - [ ] Verify all new links are accessible
+            - [ ] Close this issue when done
+
+            ### Files Updated
+            Check the latest commit for details.
+
+            ---
+            *This issue was automatically created by the daily update workflow.*`;
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: body,
+              labels: ['automation', 'daily-update']
+            });
