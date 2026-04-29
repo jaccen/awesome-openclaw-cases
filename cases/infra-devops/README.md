@@ -1,24 +1,4 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: 'f58c975b-59cd-4775-8f00-9e8017f83f83'
-  PropagateID: 'f58c975b-59cd-4775-8f00-9e8017f83f83'
-  ReservedCode1: 'c9115680-340f-49f9-be25-357dd4a905b6'
-  ReservedCode2: 'c9115680-340f-49f9-be25-357dd4a905b6'
----
 
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '8abc30e4-7f7f-4a34-9dda-61bd2b69c400'
-  PropagateID: '8abc30e4-7f7f-4a34-9dda-61bd2b69c400'
-  ReservedCode1: 'c3adcc2c-d81b-4ce3-ac17-521548b8f7b4'
-  ReservedCode2: 'c3adcc2c-d81b-4ce3-ac17-521548b8f7b4'
----
 
 ## 15. Multi-CLI Provider Management
 
@@ -212,4 +192,3 @@ project-flow-ops Skill 让 Agent 管理项目开发流水线的全生命周期�
 3. Agent 自动分析项目流水线状态
 4. 输出瓶颈报告和流程优化建议
 
-> AI生成

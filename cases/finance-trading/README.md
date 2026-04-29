@@ -1,24 +1,4 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: 'fc1f9741-a5a5-471c-b7f4-b2d14d18b5ab'
-  PropagateID: 'fc1f9741-a5a5-471c-b7f4-b2d14d18b5ab'
-  ReservedCode1: '6963af20-bd04-49ed-a28c-ccc06508b81f'
-  ReservedCode2: '6963af20-bd04-49ed-a28c-ccc06508b81f'
----
 
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: 'f574fd60-70a8-4fa3-ad6f-1d3030ac634a'
-  PropagateID: 'f574fd60-70a8-4fa3-ad6f-1d3030ac634a'
-  ReservedCode1: 'f48f747c-cd39-4ec1-9857-c5f29072917b'
-  ReservedCode2: 'f48f747c-cd39-4ec1-9857-c5f29072917b'
----
 
 ## 44. AI Meeting Scheduling
 
@@ -121,4 +101,3 @@ customer-billing-ops Skill 让 Agent 管理客户计费全流程：订阅计划�
 3. Agent 自动处理日常计费操作
 4. 查看收入报表和客户账单状态
 
-> AI生成

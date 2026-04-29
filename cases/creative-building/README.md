@@ -1,24 +1,3 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '479b8564-96e9-4363-b212-5f1c118e8bfe'
-  PropagateID: '479b8564-96e9-4363-b212-5f1c118e8bfe'
-  ReservedCode1: 'dc4559d3-df34-498f-b5cf-5922c9349206'
-  ReservedCode2: 'dc4559d3-df34-498f-b5cf-5922c9349206'
----
-
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '23a1a6d1-ad24-4ff6-b755-771f4b13e181'
-  PropagateID: '23a1a6d1-ad24-4ff6-b755-771f4b13e181'
-  ReservedCode1: '6dcd9f74-caf6-4014-81cc-c92433ef99b3'
-  ReservedCode2: '6dcd9f74-caf6-4014-81cc-c92433ef99b3'
----
 
 ## 11. AI Video Editing via Chat
 
@@ -262,4 +241,3 @@ remotion-video-creation Skill 让 Agent 使用 Remotion 框架（React 视频引
 3. Agent 编写 Remotion React 组件
 4. 渲染输出 MP4/WebM 视频文件
 
-> AI生成

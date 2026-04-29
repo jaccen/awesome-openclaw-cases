@@ -1,24 +1,4 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '3793fdb9-b2fe-44d1-a6ba-7cbbb93b9648'
-  PropagateID: '3793fdb9-b2fe-44d1-a6ba-7cbbb93b9648'
-  ReservedCode1: '142498b2-5048-4a91-86fb-552bbc59d285'
-  ReservedCode2: '142498b2-5048-4a91-86fb-552bbc59d285'
----
 
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: 'dafb44f5-0b77-4f8b-bf2b-ec3bceccba40'
-  PropagateID: 'dafb44f5-0b77-4f8b-bf2b-ec3bceccba40'
-  ReservedCode1: '57dde537-6c2a-4803-a0dd-9b5540f87c7d'
-  ReservedCode2: '57dde537-6c2a-4803-a0dd-9b5540f87c7d'
----
 
 ## 33. Local CRM Framework
 
@@ -329,4 +309,3 @@ social-graph-ranker Skill 分析你的社交/职业连接数据，按影响力�
 3. Agent 分析社交图谱并生成排名
 4. 输出关系维护建议和联系策略
 
-> AI生成
