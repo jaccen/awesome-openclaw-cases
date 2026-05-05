@@ -1,14 +1,3 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '53c16513-3f90-4075-907e-19022618dba7'
-  PropagateID: '53c16513-3f90-4075-907e-19022618dba7'
-  ReservedCode1: '81bf5a01-5c24-4a82-aaa1-5a507585bf3b'
-  ReservedCode2: '81bf5a01-5c24-4a82-aaa1-5a507585bf3b'
----
-
 ## 41. HF Papers Research Discovery
 
 | 字段 | 值 |
@@ -211,5 +200,3 @@ RAG Architect Skill 指导 Agent 设计完整的 RAG 管线：文档分块策略
 2. 描述你的知识库类型和查询场景
 3. Agent 评估多种分块和检索策略
 4. 输出最优 RAG 管线配置和基准报告
-
-> AI生成

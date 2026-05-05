@@ -1,14 +1,3 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '1693209c-352e-453c-b7ce-453da66e79db'
-  PropagateID: '1693209c-352e-453c-b7ce-453da66e79db'
-  ReservedCode1: '06716123-500a-4851-b91f-8a4344ed10fe'
-  ReservedCode2: '06716123-500a-4851-b91f-8a4344ed10fe'
----
-
 ## 77. Skill Supply Chain Verification
 
 | 字段 | 值 |
@@ -115,5 +104,3 @@ Agent 根据请求来源（所有者/已认证用户/陌生人）自动应用不
 2. 定义权限层级和角色
 3. 配置各层级的允许/拒绝规则
 4. Agent 自动根据请求来源应用对应策略
-
-> AI生成

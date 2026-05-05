@@ -1,5 +1,3 @@
-
-
 ## 33. Local CRM Framework
 
 | 字段 | 值 |
@@ -229,8 +227,6 @@ Agent 导入嘉宾电话名单，通过 VoIP 逐一拨打电话。AI 语音确�
 3. 设置确认话术模板
 4. 启动自动拨打流程，接收汇总报告
 
-> AI生成
-
 ---
 
 ## 128. Brand Voice & Content Consistency Engine
@@ -308,4 +304,3 @@ social-graph-ranker Skill 分析你的社交/职业连接数据，按影响力�
 2. 导入联系人数据（LinkedIn/邮件/CRM）
 3. Agent 分析社交图谱并生成排名
 4. 输出关系维护建议和联系策略
-

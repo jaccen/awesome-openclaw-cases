@@ -1,14 +1,3 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: 'fa68d714-15b7-49bd-a4c8-dbe364fee8da'
-  PropagateID: 'fa68d714-15b7-49bd-a4c8-dbe364fee8da'
-  ReservedCode1: 'c0073190-d1c7-4f7c-901e-6de4bf6277d6'
-  ReservedCode2: 'c0073190-d1c7-4f7c-901e-6de4bf6277d6'
----
-
 ## 5. X/Twitter Automation
 
 | 字段 | 值 |
@@ -146,5 +135,3 @@ Agent 同时从 RSS 订阅、社交媒体、GitHub 趋势和搜索引擎多路�
 2. 配置信息源列表（RSS feeds、Twitter 账号、GitHub repos）
 3. 用自然语言描述关注的技术领域
 4. Agent 按质量评分输出每日科技资讯摘要
-
-> AI生成

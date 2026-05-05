@@ -1,5 +1,3 @@
-
-
 ## 71. Cross-App MCP/Skills Sync
 
 | 字段 | 值 |
@@ -203,8 +201,6 @@ Agent 根据任务复杂度自动路由到不同成本的模型（简单任务�
 3. Agent 根据任务自动选择最优模型
 4. 查看费用报告和优化建议
 
-> AI生成
-
 ---
 
 ## 131. NestJS Backend Patterns
@@ -257,3 +253,80 @@ workspace-surface-audit Skill 全面审计 Agent 工作空间中的活跃配置�
 3. 查看费用报告和高成本操作清单
 4. 根据建议优化配置和模型选择
 
+---
+
+## 135. Agent Introspection Debugging
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Intermediate |
+| Source | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) |
+| Verified | 2026-05-05 |
+| Tags | agent, debugging, introspection, routing, prompt-boundaries |
+
+### Description
+
+调试 Agent 行为、路由和 Prompt 边界——诊断子 Agent 分发逻辑和上下文溢出问题。
+
+### How It Works
+
+agent-introspection-debugging Skill 让 Agent 检查自身行为链路：追踪请求如何路由到子 Agent、Prompt 边界在哪里截断、上下文窗口占用分布。支持可视化 Agent 调用树和 Prompt Token 分解，快速定位 Agent 误路由或上下文不足的根因。
+
+### Quick Start
+
+1. 安装 ECC 的 agent-introspection-debugging Skill
+2. 在调试模式下运行 Agent 任务
+3. Agent 自动记录路由决策和 Prompt 边界
+4. 查看调用树和 Token 分析报告定位问题
+
+---
+
+## 136. Agent Catalog Sorter
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Intermediate |
+| Source | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) |
+| Verified | 2026-05-05 |
+| Tags | agent, catalog, sort, management, organization |
+
+### Description
+
+Agent 目录排序与整理——对 Agent 编目、分类和分配面进行自动化整理。
+
+### How It Works
+
+agent-sort Skill 扫描工作空间中所有已安装的 Agent 定义（skills/agents/目录），按功能域、复杂度和依赖关系自动分类排序。识别重叠或冗余的 Agent 配置，生成优化后的目录结构和分配建议，减少 Agent 间冲突和上下文浪费。
+
+### Quick Start
+
+1. 安装 ECC 的 agent-sort Skill
+2. 在工作空间根目录运行
+3. Agent 扫描并分析所有 Agent 定义
+4. 输出排序后的目录和冗余 Agent 清单
+
+---
+
+## 137. Product Capability Mapping
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Intermediate |
+| Source | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) |
+| Verified | 2026-05-05 |
+| Tags | product, capability, mapping, planning, scope |
+
+### Description
+
+将产品目标翻译为限定范围的能力地图——从需求描述到技术能力清单的自动转换。
+
+### How It Works
+
+product-capability Skill 接收产品目标描述（用户故事、OKR、PRD 片段），自动拆解为技术能力需求清单，标注每项能力的技术复杂度、依赖关系和优先级。输出结构化的能力地图，帮助团队评估开发范围和资源分配。
+
+### Quick Start
+
+1. 安装 ECC 的 product-capability Skill
+2. 输入产品目标或需求描述
+3. Agent 拆解为技术能力清单
+4. 输出带优先级和依赖关系的能力地图

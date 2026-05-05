@@ -1,14 +1,3 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: 'eee181ad-dcb6-44db-b83f-762da04fc641'
-  PropagateID: 'eee181ad-dcb6-44db-b83f-762da04fc641'
-  ReservedCode1: '10fd7c69-bde2-46b3-ba23-0763ccefd97e'
-  ReservedCode2: '10fd7c69-bde2-46b3-ba23-0763ccefd97e'
----
-
 ## 56. Patient Document Simplification
 
 | 字段 | 值 |
@@ -185,5 +174,3 @@ Agent 收集用户的健康信息（慢性病、当前用药、过敏史、血�
 2. 输入个人健康信息（药物、过敏、血型等）
 3. Agent 自动生成格式化的急救信息卡
 4. 打印或保存到手机供紧急使用
-
-> AI生成

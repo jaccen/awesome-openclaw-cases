@@ -1,5 +1,3 @@
-
-
 ## 44. AI Meeting Scheduling
 
 | 字段 | 值 |
@@ -73,8 +71,6 @@ Agent 监控关注的科技/AI 公司财报发布时间，提前生成财报预�
 3. Agent 自动追踪财报日历
 4. 在财报发布前后收到预览和摘要
 
-> AI生成
-
 ---
 
 ## 134. Customer Billing Operations
@@ -100,4 +96,3 @@ customer-billing-ops Skill 让 Agent 管理客户计费全流程：订阅计划�
 2. 连接计费系统 API（Stripe 等）
 3. Agent 自动处理日常计费操作
 4. 查看收入报表和客户账单状态
-

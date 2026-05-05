@@ -1,11 +1,9 @@
-
-
 # awesome-openclaw-cases
 
 > 精选 OpenClaw 生态真实可复现案例，每个案例均标注来源链接与验证状态。
 
 [![Daily Update](https://github.com/jaccen/awesome-openclaw-cases/actions/workflows/daily-update.yml/badge.svg)](https://github.com/jaccen/awesome-openclaw-cases/actions/workflows/daily-update.yml)
-[![Cases Count](https://img.shields.io/badge/cases-66-blue)](cases/)
+[![Cases Count](https://img.shields.io/badge/cases-71-blue)](cases/)
 [![Verified](https://img.shields.io/badge/sources-verified-brightgreen)](#)
 
 ---
@@ -28,12 +26,12 @@ OpenClaw 生态已有 13,000+ Skills（[ClawHub](https://clawskills.sh/) 统计�
 |------|--------|------|
 | [Social Media](cases/social-media/README.md) | 5 | 信息聚合、社媒自动化、账号分析 |
 | [Creative & Building](cases/creative-building/README.md) | 9 | 内容生产、游戏/视频/播客管线、多Agent工厂、科学动画 |
-| [Infrastructure & DevOps](cases/infra-devops/README.md) | 7 | 服务器运维、CI/CD、n8n集成、SLO设计、项目流运营 |
+| [Infrastructure & DevOps](cases/infra-devops/README.md) | 9 | 服务器运维、CI/CD、n8n集成、SLO设计、项目流运营、用量追踪、代理容灾 |
 | [Productivity](cases/productivity/README.md) | 12 | 个人助理、项目管理、CRM、会议纪要、晨报、品牌声音、Google Workspace |
 | [Research & Learning](cases/research-learning/README.md) | 8 | 论文阅读、知识库、RAG管线、市场调研 |
 | [Finance & Trading](cases/finance-trading/README.md) | 4 | 预测市场、量化投研、财报追踪、客户计费 |
 | [Medical & Biotech](cases/medical-biotech/README.md) | 7 | 文献检索、药物预测、基因组分析、CRISPR筛选 |
-| [Dev Tooling](cases/dev-tooling/README.md) | 10 | TDD、代码审查、CI/CD、MCP构建、多Agent编排、NestJS、工作空间审计 |
+| [Dev Tooling](cases/dev-tooling/README.md) | 13 | TDD、代码审查、CI/CD、MCP构建、多Agent编排、NestJS、工作空间审计、Agent调试、能力地图 |
 | [Security](cases/security/README.md) | 4 | 恶意Skill检测、自治理协议、哈希链审计、访问控制 |
 
 ## 生态数据概览
@@ -41,20 +39,20 @@ OpenClaw 生态已有 13,000+ Skills（[ClawHub](https://clawskills.sh/) 统计�
 | 指标 | 数值 | 来源 |
 |------|------|------|
 | ClawHub 总 Skills | 13,729+ | [clawskills.sh](https://clawskills.sh/) |
-| 筛选后可用 Skills | 5,211 | [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) |
+| 筛选后可用 Skills | 5,198 | [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) |
 | 社区收集用例 | 42+ | [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases) |
-| 本项目收录案例 | 66 | 本仓库 |
+| 本项目收录案例 | 71 | 本仓库 |
 
 ## 核心生态仓库
 
 | 仓库 | Stars | 定位 |
 |------|-------|------|
 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 365k | OpenClaw 官方框架 |
-| [obra/superpowers](https://github.com/obra/superpowers) | 170k | TDD/工程化开发方法论 |
-| [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 169k | Agent性能优化，184 skills (v2.0.0-rc.1) |
-| [farion1231/cc-switch](https://github.com/farion1231/cc-switch) | 53.3k | 多CLI统一管理桌面工具 |
-| [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) | 47.4k | 5,200+ Skills 分类索引 |
-| [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases) | 29.7k | 42个社区真实用例 |
+| [obra/superpowers](https://github.com/obra/superpowers) | 179k | TDD/工程化开发方法论（v5.1.0） |
+| [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 174k | Agent性能优化，182 skills / 48 agents (v2.0.0-rc.1) |
+| [farion1231/cc-switch](https://github.com/farion1231/cc-switch) | 59.6k | 多CLI统一管理桌面工具（Claude Code/Codex/OpenCode/OpenClaw/Gemini CLI） |
+| [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) | 48k | 5,400+ Skills 分类索引 |
+| [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases) | 30.8k | 42个社区真实用例 |
 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | 13k | 235 skills + 305 Python 工具 |
 | [FreedomIntelligence/OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | 2.2k | 869 个医学 Skills |
 
@@ -116,5 +114,4 @@ OpenClaw 生态已有 13,000+ Skills（[ClawHub](https://clawskills.sh/) 统计�
 
 ---
 
-> 本项目数据来源均为公开可访问的 GitHub 仓库、官方文档和社区帖子。所有 Star 数据采集于 2026-04-29，实际数据可能已有变动。
-
+> 本项目数据来源均为公开可访问的 GitHub 仓库、官方文档和社区帖子。所有 Star 数据采集于 2026-05-05，实际数据可能已有变动。

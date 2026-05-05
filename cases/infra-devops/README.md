@@ -1,5 +1,3 @@
-
-
 ## 15. Multi-CLI Provider Management
 
 | 字段 | 值 |
@@ -164,8 +162,6 @@ Agent 根据服务架构自动生成事件响应手册，包括严重程度分�
 3. Agent 生成定制化事件响应手册
 4. 团队基于手册进行演练和优化
 
-> AI生成
-
 ---
 
 ## 133. Project Flow Operations
@@ -192,3 +188,62 @@ project-flow-ops Skill 让 Agent 管理项目开发流水线的全生命周期�
 3. Agent 自动分析项目流水线状态
 4. 输出瓶颈报告和流程优化建议
 
+---
+
+## 138. AI Tool Usage & Cost Tracking
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Beginner |
+| Source | [farion1231/cc-switch](https://github.com/farion1231/cc-switch) |
+| Verified | 2026-05-05 |
+| Tags | usage, cost, tracking, dashboard, multi-tool, billing |
+
+### Description
+
+跨 AI 工具的用量与费用追踪仪表板——统一监控 Claude Code / Codex / Gemini CLI / OpenCode / OpenClaw 的 API 消耗和费用。
+
+### How It Works
+
+cc-switch 的 Usage & Cost Tracking 功能自动记录各 AI CLI 工具的请求次数、Token 消耗和费用，生成趋势图表和详细请求日志。支持自定义每个模型的单价，跨工具汇总总支出，帮助用户识别高成本操作并优化 API 使用。
+
+### Quick Start
+
+1. 安装 cc-switch v3.14+ 并切换 Provider
+2. 在主界面点击 Usage 按钮
+3. 查看各工具的请求量、Token 消耗和费用趋势
+4. 设置自定义模型单价，追踪实际支出
+
+### References
+
+- [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
+
+---
+
+## 139. Local Proxy with Auto-Failover
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Intermediate |
+| Source | [farion1231/cc-switch](https://github.com/farion1231/cc-switch) |
+| Verified | 2026-05-05 |
+| Tags | proxy, failover, circuit-breaker, health-monitoring, format-conversion |
+
+### Description
+
+本地代理与自动故障转移——格式转换、断路器保护和 Provider 健康监控，确保 API 调用不中断。
+
+### How It Works
+
+cc-switch 的 Proxy 功能在本地启动代理服务，拦截 CLI 工具的 API 请求并自动转发到当前激活的 Provider。支持格式转换（不同 API 格式自动适配）、自动故障转移（Provider 故障时切换到备用）、断路器（连续失败时暂停请求）和健康监控。支持按应用级别独立代理。
+
+### Quick Start
+
+1. 安装 cc-switch v3.14+ 并配置多个 Provider
+2. 在设置中启用 Local Proxy 模式
+3. 配置自动故障转移策略和断路器阈值
+4. 各 CLI 工具通过代理自动享受高可用保障
+
+### References
+
+- [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
