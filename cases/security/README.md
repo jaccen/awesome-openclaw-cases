@@ -104,3 +104,29 @@ Agent 根据请求来源（所有者/已认证用户/陌生人）自动应用不
 2. 定义权限层级和角色
 3. 配置各层级的允许/拒绝规则
 4. Agent 自动根据请求来源应用对应策略
+
+---
+
+## 178. NotebookLM Browser Automation for Research
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Intermediate |
+| Source | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) |
+| Verified | 2026-05-17 |
+| Tags | notebooklm, browser-automation, research, google, notes |
+
+### Description
+
+NotebookLM 浏览器自动化——将文献和笔记自动导入 Google NotebookLM 进行交互式分析。
+
+### How It Works
+
+notebooklm Skill 通过浏览器自动化操作 Google NotebookLM：Agent 将文献 PDF、笔记文件和网页内容自动上传到 NotebookLM，创建 Audio Overview 和 FAQ，支持跨来源查询和总结。与 litreview Skill 配合使用，将系统综述结果一键导入 NotebookLM 进行交互式深度分析。
+
+### Quick Start
+
+1. 安装 notebooklm Skill
+2. 授权 Google 账号浏览器访问
+3. 指定要导入的文献和笔记来源
+4. Agent 自动上传并在 NotebookLM 中生成可交互的知识库

@@ -304,3 +304,133 @@ social-graph-ranker Skill 分析你的社交/职业连接数据，按影响力�
 2. 导入联系人数据（LinkedIn/邮件/CRM）
 3. Agent 分析社交图谱并生成排名
 4. 输出关系维护建议和联系策略
+
+---
+
+## 145. BizDev Toolkit
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Intermediate |
+| Source | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) |
+| Verified | 2026-05-12 |
+| Tags | bizdev, business-development, partnerships, outreach, pipeline |
+
+### Description
+
+商务拓展工具包——合作伙伴发现、外联策略、管线管理和谈判准备自动化。
+
+### How It Works
+
+bizdev-toolkit Skill 让 Agent 自动化商务拓展全流程：基于公司画像发现潜在合作伙伴、生成个性化外联邮件、追踪商务管线阶段（接触→评估→谈判→签约）、为谈判准备竞品分析和价值主张文档。支持 LinkedIn 外联和邮件序列自动化。
+
+### Quick Start
+
+1. 安装 bizdev-toolkit Skill
+2. 描述目标行业和合作类型
+3. Agent 生成潜在合作伙伴列表和外联模板
+4. 追踪管线进展并输出谈判准备材料
+
+---
+
+## 157. C-Level Advisory Suite
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Advanced |
+| Source | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) |
+| Verified | 2026-05-15 |
+| Tags | c-level, advisory, cxo, strategy, board, culture |
+
+### Description
+
+C-Suite 全角色顾问套件——10 个高管 Persona（CFO/CMO/CRO/CPO/COO/CHRO/CISO/GC/CDO/CAIO），含董事会管理和文化建设。
+
+### How It Works
+
+c-level-advisor Skills 提供完整的 C-Suite 智能顾问体系：每个 Persona 拥有独立的决策框架和沟通风格（CFO 关注现金流和 ROI、CMO 关注增长和品牌、CISO 关注风险和合规等）。board-meetings Skill 辅助董事会材料准备和议题管理，culture-collaboration Skill 辅助组织文化建设。Agent 按需切换角色，从不同高管视角分析问题并输出决策建议。支持 Solo Sprint（个人项目多阶段切换）和 Multi-Agent Handoff（多角色交叉审查）两种编排模式。
+
+### Quick Start
+
+1. 安装 c-level-advisor Skills（按需选择角色或安装全套）
+2. 激活对应 Persona（如 startup-cto / growth-marketer / solo-founder）
+3. 用自然语言描述业务问题，Agent 从该角色视角分析
+4. 使用 Multi-Agent Handoff 模式让多个 C-Level 角色交叉审查
+
+---
+
+## 167. Brain Dump to Action (Capture)
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Beginner |
+| Source | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) |
+| Verified | 2026-05-17 |
+| Tags | capture, brain-dump, action, productivity, triage |
+
+### Description
+
+灵感倾泻→行动清单——将脑海中的碎片信息自动分类为待办、项目和参考资料。
+
+### How It Works
+
+capture Skill 让 Agent 充当个人信息收件箱：用户随意倾泻想法、链接、备忘，Agent 自动分类为 Next Action（可立即执行的待办）、Project（需多步推进的项目）、Reference（待查的参考资料）。支持 7 文件知识库契约确保上下文不丢失。
+
+### Quick Start
+
+1. 安装 capture Skill
+2. 随时向 Agent 发送想法、链接和备忘
+3. Agent 自动分类并追加到对应清单
+4. 定期回顾，将项目拆解为 Next Action
+
+---
+
+## 168. Email Inbox Triage
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Intermediate |
+| Source | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) |
+| Verified | 2026-05-17 |
+| Tags | email, inbox, triage, automation, reply-draft |
+
+### Description
+
+邮件收件箱智能分拣——自动分类、生成回复草稿和跟进提醒。
+
+### How It Works
+
+email Skill（含 inbox-setup 和 inbox-triage 两个子 Skill）为 Agent 提供邮件管理能力：inbox-setup 配置邮件账号和分类规则，inbox-triage 对新邮件自动分类（需回复/需行动/仅参考/垃圾），为需回复的邮件生成回复草稿，对需行动的邮件创建待办并设定跟进提醒。
+
+### Quick Start
+
+1. 安装 email Skill（inbox-setup + inbox-triage）
+2. 配置邮件账号和分类偏好
+3. Agent 自动分拣新邮件并生成回复草稿
+4. 审阅草稿后一键发送或继续修改
+
+---
+
+## 169. Reflective Journal
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Beginner |
+| Source | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) |
+| Verified | 2026-05-17 |
+| Tags | reflect, journal, productivity, self-improvement, light-prompt |
+
+### Description
+
+轻量反思日记——每日 3 问引导自我复盘，Agent 识别模式并提供建议。
+
+### How It Works
+
+reflect Skill 用 3 个轻量 Prompt 引导每日反思：今天最顺利的事、最大阻碍、明天的一个改进。Agent 持续积累反思记录，自动识别行为模式（如"每周二效率低"），提供针对性改进建议和趋势追踪。
+
+### Quick Start
+
+1. 安装 reflect Skill
+2. 每日花 2 分钟回答 3 个反思问题
+3. Agent 积累记录并自动识别模式
+4. 每周生成反思趋势报告和建议

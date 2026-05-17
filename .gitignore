@@ -4,6 +4,7 @@ node_modules/
 # Cache (regenerated daily)
 .fetch-cache/
 .fetch-cache-prev/
+.fetch-cache-new/
 
 # OS
 .DS_Store
@@ -16,3 +17,4 @@ Thumbs.db
 # Temp
 *.tmp
 *.bak
+.temp/

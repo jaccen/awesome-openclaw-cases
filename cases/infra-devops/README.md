@@ -247,3 +247,55 @@ cc-switch 的 Proxy 功能在本地启动代理服务，拦截 CLI 工具的 API
 ### References
 
 - [farion1231/cc-switch](https://github.com/farion1231/cc-switch)
+
+---
+
+## 147. Chaos Engineering & Kubernetes Operator Resilience Suite
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Advanced |
+| Source | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) |
+| Verified | 2026-05-12 |
+| Tags | chaos-engineering, kubernetes, operator, resilience, fault-injection |
+
+### Description
+
+混沌工程 + K8s Operator 韧性套件——用故障注入验证系统韧性，用 Operator 模式管理有状态服务。
+
+### How It Works
+
+chaos-engineering Skill 指导 Agent 设计和执行故障注入实验：网络分区、Pod 驱逐、CPU/内存压力测试、依赖服务降级。kubernetes-operator Skill 则教 Agent 构建自定义 K8s Operator 管理有状态服务：CRD 定义、Reconcile 循环、状态管理和扩缩容策略。两个 Skill 组合使用，先注入故障验证韧性，再通过 Operator 自动修复。
+
+### Quick Start
+
+1. 安装 chaos-engineering 和 kubernetes-operator Skills
+2. 定义韧性假设（如"Pod 驱逐后 30s 内自动恢复"）
+3. Agent 生成故障注入实验和 Operator 修复逻辑
+4. 在测试集群执行并验证韧性指标
+
+---
+
+## 177. CC Switch v3.15 Multi-CLI Hub with Hermes Agent
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Beginner |
+| Source | [farion1231/cc-switch](https://github.com/farion1231/cc-switch) |
+| Verified | 2026-05-17 |
+| Tags | cc-switch, hermes, multi-cli, hub, management, v3.15 |
+
+### Description
+
+CC Switch v3.15 全新发展——新增 Hermes Agent 支持、官方上线 ccswitch.io，6 工具统一管理桌面。
+
+### How It Works
+
+cc-switch v3.15.0 正式加入 Hermes Agent 作为第 6 个受支持的 CLI 工具，与 Claude Code / Codex / Gemini CLI / OpenCode / OpenClaw 并列管理。同时上线官方网站 ccswitch.io，提供产品文档和下载入口。保留 v3.12 以来的 Skills 管理、Usage Dashboard、Session Manager、Workspace Editor、Cloud Sync 和 Deep Link 六大功能板块。
+
+### Quick Start
+
+1. 从 [ccswitch.io](https://ccswitch.io) 或 [GitHub Releases](https://github.com/farion1231/cc-switch/releases) 下载 v3.15+
+2. 导入已有 CLI 配置（含 Hermes Agent）
+3. 在统一界面切换/管理 6 个工具
+4. 通过 Usage Dashboard 追踪各工具用量和费用

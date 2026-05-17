@@ -1,4 +1,3 @@
-
 ## 11. AI Video Editing via Chat
 
 | 字段 | 值 |
@@ -241,3 +240,80 @@ remotion-video-creation Skill 让 Agent 使用 Remotion 框架（React 视频引
 3. Agent 编写 Remotion React 组件
 4. 渲染输出 MP4/WebM 视频文件
 
+---
+
+## 148. Skywork AI Content Generation Suite
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Beginner |
+| Source | [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) |
+| Verified | 2026-05-12 |
+| Tags | skywork, ppt, music, design, search, ai-generation, content |
+
+### Description
+
+Skywork AI 内容生成套件——通过对话生成 PPT、音乐、图像和搜索，零代码创作全平台内容。
+
+### How It Works
+
+Skywork 系列技能覆盖四类内容生成：skywork-ppt 生成和编辑 PowerPoint 演示文稿、skywork-music-maker 通过 Mureka AI 创作专业音乐、skywork-design 生成海报 Logo 等图像、skywork-search 提供 AI 驱动的实时网络搜索。用户通过自然语言描述需求，Agent 调用对应 Skill 完成生成和编辑。
+
+### Quick Start
+
+1. 安装 Skywork 系列 Skills（skywork-ppt / skywork-music-maker / skywork-design / skywork-search）
+2. 用自然语言描述内容需求
+3. Agent 调用对应 Skill 生成内容
+4. 迭代修改直到满意，导出最终文件
+
+---
+
+## 158. Marketing & Growth Skills Suite
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Intermediate |
+| Source | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) |
+| Verified | 2026-05-15 |
+| Tags | marketing, growth, seo, cro, content, sales, intelligence |
+
+### Description
+
+营销增长 7 大作战单元——44 个 Skills 覆盖内容、SEO、CRO、渠道、增长、情报和销售全链路。
+
+### How It Works
+
+marketing-skill 模块按职能拆分为 7 个作战 Pod：Content Pod（8 skills，文案/编辑/品牌/社交）、SEO Pod（5 skills，技术SEO/关键词/外链/结构化数据）、CRO Pod（6 skills，A/B测试/热图/Landing优化/CXM）、Channels Pod（6 skills，邮件/社媒/广告/社区）、Growth Pod（4 skills，增长实验/漏斗/留存/激活）、Intelligence Pod（4 skills，竞品/市场研究/趋势/定价）、Sales Pod（2 skills，销售脚本/客户画像）。每个 Pod 携带专用 Python 工具链（共 32 个），由 orchestration router 根据目标自动调度。
+
+### Quick Start
+
+1. 安装 marketing-skill Skills（按 Pod 或全套）
+2. 描述营销目标（如"提升官网转化率 20%"）
+3. Agent 自动路由到 CRO + Growth Pod 协同作战
+4. 输出策略方案、执行脚本和效果追踪模板
+
+---
+
+## 170. Landing Page Generator
+
+| 字段 | 值 |
+|------|-----|
+| Difficulty | Intermediate |
+| Source | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) |
+| Verified | 2026-05-17 |
+| Tags | landing, html, generator, marketing, single-file |
+
+### Description
+
+单文件 HTML 落地页生成器——4 种设计风格，零依赖即时上线。
+
+### How It Works
+
+landing Skill 让 Agent 根据产品描述自动生成单文件 HTML 落地页，支持 4 种设计风格：Minimal（极简 SaaS）、Bold（视觉冲击型）、Corporate（企业专业型）、Playful（创意趣味型）。生成的 HTML 文件含内联 CSS/JS，无需构建工具直接部署，支持响应式和暗色模式。
+
+### Quick Start
+
+1. 安装 landing Skill
+2. 描述产品名称、核心价值和目标用户
+3. Agent 生成单文件 HTML 落地页
+4. 直接部署到 Netlify/Vercel 或本地预览
